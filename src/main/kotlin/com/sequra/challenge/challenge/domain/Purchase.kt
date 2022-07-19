@@ -21,15 +21,13 @@ class Purchase(
     val createdAt: LocalDate,
     val completedAt: LocalDate? = null,
 
-    @ManyToOne(cascade = [CascadeType.ALL], /*optional = false, fetch = FetchType.LAZY*/)
+    @ManyToOne(cascade = [CascadeType.ALL])
     @JoinColumn(name = "shopper_id", nullable = false)
-    //@NotFound(action = NotFoundAction.IGNORE)
     var shopper: Shopper? = null,
 
     @JsonBackReference
-    @ManyToOne(cascade = [CascadeType.ALL], /*optional = false, fetch = FetchType.LAZY*/)
+    @ManyToOne(cascade = [CascadeType.ALL])
     @JoinColumn(name = "merchant_id", nullable = false)
-    //@NotFound(action = NotFoundAction.IGNORE)
     var merchant: Merchant? = null
 ) {
 
