@@ -26,3 +26,4 @@ With the application started access: [Doc](http://localhost:8080/swagger-ui/)
 * Creating the data structure via migrations
 * create docker image
 * Schedule weekly calculations
+* Flow for data persistence
